@@ -1,5 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/login.css" rel="stylesheet">
+</head>
 <body>
-<h2>Login</h2>
+	<div class="container">
+		<div class="wrapper">
+			<form class="form-signin" action="login" method="post">
+				<h3 class="form-signin-heading">
+					<img
+						src="http://www.logospike.com/wp-content/uploads/2015/11/Logo_Image_01.png"
+						style="width: 100px; height: 100px" alt="Alternate Text" /> <br />
+					<b style="color: #c7c7c7 !important">Servlet Exercise</b>
+				</h3>
+
+				<input type="text" class="form-control" name="email"
+					placeholder="Email" required="" autofocus="" /><br /> <input
+					type="password" class="form-control" name="password"
+					placeholder="Password" required="" />
+
+				<button class="btn btn-lg btn-primary btn-block" name="Submit"
+					value="Login" type="Submit">Login</button>
+			</form>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script
+		src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
