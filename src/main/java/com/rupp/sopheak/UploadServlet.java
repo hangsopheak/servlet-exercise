@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -97,11 +98,15 @@ public class UploadServlet extends HttpServlet {
                     
                     // Write the file
                     file = new File(filePath + fileName);
-                    System.out.println(" file location :" + file.getAbsolutePath());
+                  //  System.out.println(" file location :" + file.getAbsolutePath());
                     fi.write(file);
                     
-                    out.println("Uploaded Filename: " + fileName + "<br>");
-                    out.println("file store location is : " + file.getAbsolutePath() + "<br>");
+                 //   out.println("Uploaded Filename: " + fileName + "<br>");
+                  //  out.println("file store location is : " + file.getAbsolutePath() + "<br>");
+                    
+                    HttpSession session = request.getSession(true);
+            		session.setAttribute("urlPhoto", "uploads/" + fileName);
+    				response.sendRedirect("/myProfile");	
                 }
             }
             out.println("</body>");

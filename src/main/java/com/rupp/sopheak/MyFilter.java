@@ -1,7 +1,6 @@
 package com.rupp.sopheak;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 
 import javax.servlet.Filter;
@@ -36,7 +35,6 @@ public class MyFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		final PrintWriter out = response.getWriter();
         // Get the IP address of client machine.   
         String ipAddress = request.getRemoteAddr();
         

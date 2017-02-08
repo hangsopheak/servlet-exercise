@@ -20,15 +20,17 @@ color: #999;
 <body>
 	<div class="container">
 	    <div class="row">
-	        <div class="col-xs-12 col-sm-6 col-md-6">
+	        <div class="col-xs-12 col-sm-8 col-md-8">
 	            <div class="well well-sm">
 	                <div class="row">
 	                    <div class="col-sm-6 col-md-4">
-	                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+	                        <img src="<%= (request.getAttribute("urlPhoto") == "" ? "http://placehold.it/380x500" : request.getAttribute("urlPhoto")) %>" alt="" class="img-rounded img-responsive" />
 	                    </div>
 	                    <div class="col-sm-6 col-md-8">
 	                        <h4>
-	                            My Profile</h4>
+	                            My Profile
+	                         	&nbsp;|&nbsp;<a href="/logout">Logout</a>
+	                         </h4>
 	                        <p>
 	                            <label>User ID: &nbsp;</label><%= request.getAttribute("userId") %>
 	                            <br />
@@ -43,10 +45,10 @@ color: #999;
 	                            <form action="uploadServlet" method="post" enctype="multipart/form-data">
 									<input type="file" name="file" size="50" />
 									<br />
-									<input type="submit" value="Upload File" />
+									<input type="submit" class="btn btn-primary" value="Upload File" />
 								</form>
 	                        </div>
-	                        <a href="/logout">Logout</a>
+	                        
 	                    </div>
 	                </div>
 	            </div>

@@ -3,6 +3,13 @@
 
 <web-app>
 	<display-name>User Authentication</display-name>
+	
+	<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>src/main/webapp/uploads/</param-value> 
+</context-param>
+
 	<servlet>
 		<servlet-name>Login</servlet-name>
 		<servlet-class>com.rupp.sopheak.LoginServlet</servlet-class>
