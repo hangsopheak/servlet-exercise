@@ -12,9 +12,7 @@
 		<div class="wrapper">
 			<form class="form-signin" action="login" method="post">
 				<h3 class="form-signin-heading">
-					<img
-						src="http://www.logospike.com/wp-content/uploads/2015/11/Logo_Image_01.png"
-						style="width: 100px; height: 100px" alt="Alternate Text" /> <br />
+					
 					<b style="color: #c7c7c7 !important">Servlet Exercise</b>
 				</h3>
 

@@ -77,7 +77,7 @@ public class User {
 	}
 
 	public String getUrlPhoto() {
-		return urlPhoto;
+		return (urlPhoto == null ? "":urlPhoto);
 	}
 
 	public void setUrlPhoto(String urlPhoto) {

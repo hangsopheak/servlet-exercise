@@ -46,7 +46,6 @@ color: #999;
 									<input type="submit" value="Upload File" />
 								</form>
 	                        </div>
-	                        <a href="/logout">Logout</a>
 	                    </div>
 	                </div>
 	            </div>

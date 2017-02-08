@@ -50,19 +50,20 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		try {
 			if(this.authenticated(email, password)){
-				response.sendRedirect("/myProfile");
 				session.setAttribute("userId", this.authenticatedUser.getId());
 				session.setAttribute("email", this.authenticatedUser.getEmail());
 				session.setAttribute("createdDate", this.authenticatedUser.getCreatedDateToString());
 				session.setAttribute("urlPhoto", this.authenticatedUser.getUrlPhoto());
+				response.sendRedirect("/myProfile");
 			}else{
 				response.sendRedirect("/login");
 			}
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			response.sendRedirect("/login.jsp");
+
 		}
-		response.sendRedirect("/login.jsp");
 	}
 	
 	private boolean authenticated(String email, String password) throws ParseException{
