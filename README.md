@@ -24,11 +24,6 @@ git clone https://github.com/hangsopheak/servlet-exercise.git
 mvn install
 </pre>
 
-3. Install maven dependencies:
-<pre>
-mvn install
-</pre>
-
 4. Generate Eclipse IDE files (Specifically for Eclipse):
 <pre>
 mvn eclipse:eclipse
